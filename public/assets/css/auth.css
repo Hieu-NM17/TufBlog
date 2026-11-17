@@ -1,0 +1,21 @@
+.login {
+    text-align: center;
+    margin-top: 40vh;
+}
+
+h1 {
+    color: var(--color-primary);
+}
+
+.login__info {
+    margin: var(--spacing-2);
+}
+
+.login__input {
+    padding: 0.375rem;
+    border-radius: var(--radius-sm);
+}
+
+.login__forgot {
+    text-align: right;
+}
