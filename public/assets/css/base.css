@@ -4,15 +4,15 @@
 
 :root {
     /* Brand / neutral colors */
-    --color-primary: #000000;
+    --color-primary: #101010;
     --color-primary-hover: #262626;
-    --color-background: #ffffff;
+    --color-background: #1E1E1E;
     --color-surface: #f7f7f7;
     --color-surface-hover: #eeeeee;
-    --color-text: #101010;
+    --color-text: #F3F5F7;
     --color-text-muted: #737373;
-    --color-border: #e5e5e5;
-    --color-border-strong: #cfcfcf;
+    --color-border: #323333;
+    --color-border-strong: #282929;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-danger: #dc2626;
@@ -38,12 +38,16 @@
     --radius-sm: 0.375rem;
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
+    --radius-splg: 3rem;
     --radius-full: 9999px;
     --shadow-sm: 0 1px 2px rgb(0 0 0 / 5%);
     --shadow-md: 0 4px 12px rgb(0 0 0 / 8%);
 
     /* Layout */
     --container-width: 1200px;
+
+    /* Font */
+    --font-primary: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -60,9 +64,10 @@ html {
 body {
     min-height: 100vh;
     margin: 0;
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-base);
-    line-height: 1.5;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
     color: var(--color-text);
     background-color: var(--color-background);
 }
