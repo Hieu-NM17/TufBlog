@@ -10,6 +10,8 @@ $pageTitle = $pageTitle ?? 'TufBlog';
 
     <title><?= htmlspecialchars($pageTitle) ?></title>
 
+    <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
 </head>
 <body>
