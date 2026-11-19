@@ -40,6 +40,10 @@ h1 {
     border: none;
 }
 
+.login__error {
+    color: var(--color-white);
+}
+
 .login__forgot a {
     display: block;
     width: 300px;
