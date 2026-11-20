@@ -1,34 +1,42 @@
 <?php
-$pageTitle = 'Đăng nhập';
+$pageTitle = 'Đăng Nhập';
+$styles = ['auth.css'];
 require_once __DIR__ . '/../layouts/header.php';
 ?>
 
 
-<main class="login">
-    <form action="" method="post" class="login__form">
-        <div class="login__title">
+<main class="auth">
+    <form action="" method="post" class="auth__form">
+        <div class="auth__title">
             <h1><?= $pageTitle ?></h1>
         </div>
 
         <?php
         if (!empty($error)) {
-            echo '<p class="login__error">' . htmlspecialchars($error) . '</p>';
+            echo '<p class="auth__error">' . htmlspecialchars($error) . '</p>';
         }
         ?>
 
-        <div class="login__info">
-            <input class="login__input" type="text" name="username" placeholder="Tên đăng nhập" required value="<?= htmlspecialchars($username ?? '') ?>">
+        <div class="auth__info">
+            <input class="auth__input" type="text" name="username" placeholder="Tên đăng nhập" required value="<?= htmlspecialchars($username ?? '') ?>">
         </div>
 
-        <div class="login__info">
-            <input class="login__input" type="password" name="password" placeholder="Mật khẩu" required>
+        <div class="auth__info">
+            <input class="auth__input" type="password" name="password" placeholder="Mật khẩu" required>
         </div>
 
-        <div class="login__forgot">
-            <a href="#">Quên mật khẩu</a>
+        <div class="auth__function">
+            <div class="auth__function--register">
+                <a href="#">Đăng ký</a>
+            </div>
+
+            <div class="auth__function--forgot">
+                <a href="#">Quên mật khẩu</a>
+            </div>
+
         </div>
 
-        <button class="login__button" type="submit">Đăng nhập</button>
+        <button class="auth__button" type="submit">Đăng nhập</button>
     </form>
 </main>
 <?php
