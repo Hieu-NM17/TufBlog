@@ -22,6 +22,11 @@
                     Giới thiệu
                 </a>
             </li>
+             <li class="navbar__item">
+                <a href="/profile.php" class="navbar__link">
+                    Trang cá nhân
+                </a>
+            </li>
         </ul>
 
         <div class="navbar__actions">

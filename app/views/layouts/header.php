@@ -13,5 +13,6 @@ $pageTitle = $pageTitle ?? 'TufBlog';
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
 </head>
 <body>

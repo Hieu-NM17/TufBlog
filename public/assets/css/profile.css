@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #111111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile__nav-items {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.profile {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 200px 600px 280px;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+}
+
+
+.profile__left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile__nav a {
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #555555;
+}
+
+.profile__nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.profile__nav a.dang-chon {
+  font-weight: bold;
+  color: #111111;
+  background-color: #efefef;
+}
+
+.profile__create {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #111111;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Cột giữa */
+.main {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 20px 24px;
+}
+
+.main__heading {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.main__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.main__info--nickname {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.main__info--bio {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.main__info--follow {
+  margin-top: 12px;
+  color: #777777;
+  font-size: 14px;
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hai-nut {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.hai-nut button {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hai-nut button:hover {
+  background-color: #f9fafb;
+}
+
+/* Cột phải */
+.o-thong-ke {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
