@@ -26,4 +26,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     }
 }
 require_once __DIR__ . '/../app/views/auth/login.php';
-?>
