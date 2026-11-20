@@ -1,0 +1,23 @@
+{
+  "name": "TufBlog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.php",
+  "scripts": {
+    "watch": "browser-sync start --proxy \"http://tufblog.test\" --startPath login.php --files \"app/**/*, public/**/*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.5.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  }
+}
