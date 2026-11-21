@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 h1 {
@@ -63,6 +63,7 @@ h1 {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    font-weight: 600;
 }
 
 .auth__function--forgot {
@@ -71,10 +72,18 @@ h1 {
     font-size: medium;
 }
 
+.auth__function--forgot:hover {
+    text-decoration: underline;
+}
+
 .auth__function--register {
     margin: 0 5px;
     text-align: left;
     font-size: medium;
+}
+
+.auth__function--register:hover {
+    text-decoration: underline;
 }
 
 .auth__button {
@@ -87,4 +96,27 @@ h1 {
     min-width: 100px;
     min-height: 50px;
     font-size: medium;
+    font-weight: 600;
 }
+
+.auth__button:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.auth__return {
+    display: block;
+    width: 100%;
+    min-height: 2px;
+    font-size: medium;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.auth__return a:hover {
+    text-decoration: underline;
+}
+
+.auth__success {
+    color: var(--color-text);
+}
+
