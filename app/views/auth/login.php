@@ -15,6 +15,10 @@ require_once __DIR__ . '/../layouts/header.php';
         if (!empty($error)) {
             echo '<p class="auth__error">' . htmlspecialchars($error) . '</p>';
         }
+
+        if (!empty($success)) {
+            echo '<p class="auth__success">' . htmlspecialchars($success) . '</p>';
+        }
         ?>
 
         <div class="auth__info">
@@ -27,13 +31,12 @@ require_once __DIR__ . '/../layouts/header.php';
 
         <div class="auth__function">
             <div class="auth__function--register">
-                <a href="#">Đăng ký</a>
+                <a href="register.php">Đăng ký</a>
             </div>
 
             <div class="auth__function--forgot">
                 <a href="#">Quên mật khẩu</a>
             </div>
-
         </div>
 
         <button class="auth__button" type="submit">Đăng nhập</button>
