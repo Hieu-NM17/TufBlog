@@ -11,7 +11,6 @@ $pageTitle = $pageTitle ?? 'TufBlog';
 
     <title><?= htmlspecialchars($pageTitle) ?></title>
 
-    <link rel="stylesheet" href="/assets/css/base.css">
     <?php if (!empty($styles) && is_array($styles)): ?>
         <?php foreach ($styles as $style): ?>
             <link rel="stylesheet" href="/assets/css/<?= htmlspecialchars($style) ?>">

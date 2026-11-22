@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Đăng Ký';
-$styles = ['auth.css'];
+$styles = ['base.css', 'auth.css'];
 require_once __DIR__ . '/../layouts/header.php';
 ?>
 
