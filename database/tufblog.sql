@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 18, 2026 at 01:26 PM
+-- Generation Time: Nov 22, 2026 at 02:02 AM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.36
 
@@ -63,7 +63,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `display_name`, `email`, `avatar`, `role`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'ad', 'Administrator', 'admin@tufblog.com', NULL, 'admin', '2026-11-18 20:24:29', '2026-11-18 20:24:29');
+(1, 'admin', '$2y$10$YIv6J.4ljGnKr4bHOzKN2OIPy/Pi4VaG4uXW2szoU7cGAsUHHD.hm', 'Administrator', 'admin@tufblog.com', NULL, 'admin', '2026-11-18 20:24:29', '2026-11-21 17:26:25'),
+(2, 'Trung', '$2y$10$/wv9rMr1gVPV6RuIke3BO.h39snRgS2XhNaqt9gX.JEqJJqU2AQrG', 'XEKNX', 'trung@gmail.com', NULL, 'user', '2026-11-21 16:34:18', NULL),
+(3, 'user_2rczv_571', '$2y$10$cN9z2Ln0N2haAhyhAdUvXuScif7hmXe1hC2itItVUKAfLd2IJLhka', 'Tester 571', 'test_hn19l571@gmail.com', NULL, 'user', '2026-11-21 17:10:36', NULL),
+(4, 'user_kmlsb_629', '$2y$10$0jba9TuoqYk7UzsjsRHuUupAEb8Maj2iF6TkELzmRnYu9Ra3XU.vO', 'Tester 629', 'test_3aqer629@gmail.com', NULL, 'user', '2026-11-21 17:23:50', NULL);
 
 --
 -- Indexes for dumped tables
@@ -99,7 +102,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
