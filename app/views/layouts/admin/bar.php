@@ -36,6 +36,10 @@
             <div class="top-bar__create">
                 <a href="#">Tạo</a>
             </div>
+
+            <div class="top-bar__profile">
+                <img src="" alt="">
+            </div>
         </div>
 
     </nav>
