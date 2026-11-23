@@ -118,3 +118,33 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- bài viết
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('2','Hello mn, mình là Trung, đây là bài viết đầu tiên của mình trong quá trình xây dựng data base cho blog của nhóm','published', DATE_SUB(NOW(), INTERVAL 7 DAY));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('3','Mọi người có tin được là loài bò thật sự biết bay kh, hôm qua Khoa vừa gặp xong','published', DATE_SUB(NOW(), INTERVAL 7 DAY));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('4','Hiếu nhóm trưởng đây, thật ra tôi là một người rất _ay','published', DATE_SUB(NOW(), INTERVAL 2 DAY));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('2','Đài Khí tượng thủy văn Nam Bộ cho biết:
+⛅️Trong ngày 23/11: thời tiết phổ biến trời mây thay đổi, ngày chủ đạo là nắng, cường độ nắng mạnh dần về trưa chiều mang lại cảm giác khá oi nóng, miền Đông có nơi xuất hiện nắng nóng nhẹ ở TP Đồng Nai, Tây Ninh và TP HCM.
+🌡️Nhiệt độ cao nhất dao động trong khoảng 32-35 độ, có nơi trên 35 độ.
+⛈Trong thời điểm chiều tối nay khả năng khu vực Nam Bộ sẽ xuất hiện những cơn mưa rào và dông ở diện vài nơi (diện mưa gần khoảng 1/3 diện tích khu vực), cục bộ có mưa vừa. Các khu vực dọc ven biển phía Đông khả năng đôi lúc có mưa trong sáng nay do các vùng mây trên biển di chuyển về phía đất liền. Mưa dông khả năng còn kèm theo lốc sét, gió giật mạnh. Quý vị cần lưu ý.
+📌Ngoài ra, cần lưu ý mực nước trên các sông, kênh rạch TP HCM đang lên theo kỳ triều cường rằm tháng 10 Âm lịch, cần đề phòng gây ngập khu vực trũng thấp, vùng ven sông.','published', DATE_SUB(NOW(), INTERVAL 1 DAY));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('4','Mình đang gặp 1 chút rắc rối với ngôn ngữ js, bạn nào rảnh chỉ mình phần này với','published', DATE_SUB(NOW(), INTERVAL 1 DAY));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('2','Chiều 20/11, với 475/477 đại biểu tham gia biểu quyết tán thành, Quốc hội chính thức thông qua Luật sửa đổi, bổ sung một số điều của Luật Thuế thu nhập doanh nghiệp, Luật Thuế sử dụng đất phi nông nghiệp, Luật Thuế thu nhập cá nhân.
+Điều hành phiên họp, Phó Chủ tịch Quốc hội Nguyễn Thị Hồng nhấn mạnh, Luật sửa đổi, bổ sung một số điều của Luật Thuế thu nhập doanh nghiệp, Luật Thuế sử dụng đất phi nông nghiệp, Luật Thuế thu nhập cá nhân gồm 04 Điều, có hiệu lực thi hành từ ngày 01/01/2027, trừ một số quy định cụ thể nêu trong báo cáo giải trình, tiếp thu.
+Với 475/477 đại biểu có mặt tham gia biểu quyết tán thành, Quốc hội chính thức thông qua Luật sửa đổi, bổ sung một số điều của Luật Thuế thu nhập doanh nghiệp, Luật Thuế sử dụng đất phi nông nghiệp, Luật Thuế thu nhập cá nhân.
+Trước khi các đại biểu Quốc hội biểu quyết, Quốc hội đã nghe Bộ trưởng Bộ Tài chính Ngô Văn Tuấn, thừa uỷ quyền của Thủ tướng Chính phủ trình bày Báo cáo về việc tiếp thu, giải trình, chỉnh lý và hoàn thiện dự thảo Luật sửa đổi, bổ sung một số điều của Luật Thuế thu nhập doanh nghiệp, Luật Thuế sử dụng đất phi nông nghiệp, Luật Thuế thu nhập cá nhân.','published', DATE_SUB(NOW(), INTERVAL 1 HOUR));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('4','Hí ae','published', DATE_SUB(NOW(), INTERVAL 2 HOUR));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('2','Cục Thuế đã có Công văn số 8743/CT-PC yêu cầu toàn ngành quán triệt nghiêm trách nhiệm của cơ quan thuế, công chức thuế trong thi hành công vụ. Theo đó, Cục Thuế đề nghị Thủ trưởng cơ quan thuế các cấp chỉ đạo công chức thuế trong phạm vi quản lý thực hiện đúng quy định của pháp luật trong việc tiếp nhận, xử lý hồ sơ thuế của người nộp thuế, tránh để xảy ra tình trạng chậm giải quyết cho người dân, doanh nghiệp, tổ chức gây bức xúc cho người nộp thuế, làm ảnh hưởng đến uy tín của cơ quan thuế.
+Nếu người nộp thuế nộp đầy đủ hồ sơ đúng quy định của pháp luật mà công chức thuế tiếp nhận hồ sơ không xử lý, chậm xử lý thì phải kiên quyết xử lý trách nhiệm theo nguyên tắc lỗi của ai người đấy chịu, lỗi của công chức thuế thì công chức thuế phải chịu trách nhiệm theo nguyên tắc bình đẳng trước pháp luật. nội dung công văn nhấn mạnh.','published', DATE_SUB(NOW(), INTERVAL 2 HOUR));
+
+INSERT INTO `posts`(`user_id`, `content`, `status`, `created_at`) VALUES ('3','Loài bò thật sự biết bay đấy','published', DATE_SUB(NOW(), INTERVAL 30 MINUTE));
+
+INSERT INTO `posts`( `user_id`, `content`, `status`, `created_at`) VALUES ('1','Thông báo từ quản trị viên: vui lòng giữ bình luận lịch sự và tôn trọng nhau','published', DATE_SUB(NOW(), INTERVAL 30 MINUTE));
