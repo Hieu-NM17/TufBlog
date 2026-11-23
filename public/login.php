@@ -1,10 +1,12 @@
 <?php
-$error = '';
 session_start();
+$errors = [];
+$success = $_SESSION['success'] ?? '';
+unset($_SESSION['success']);
 include __DIR__  . '/../app/config/database.php';
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    $username = $_POST['username'];
+    $username = trim($_POST['username']);
     $password = $_POST['password'];
 
     $stmt = $conn->prepare('SELECT id, username, password, role FROM users WHERE username = ? LIMIT 1');
@@ -13,17 +15,20 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    if ($user && $password == $user['password']) {
+    if ($user && password_verify($password, $user['password'])) {
         session_regenerate_id(true);
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['role'] = $user['role'];
+
+        if ($_SESSION['role'] === 'admin') {
+            header('Location: admin/index.php');
+        }
         header('Location: index.php');
         exit();
     }
     else {
-        $error = 'Thông tin đăng nhập không đúng !';
+        $errors['wrong_info'] = 'Thông tin đăng nhập không đúng !';
     }
 }
 require_once __DIR__ . '/../app/views/auth/login.php';
-?>

@@ -4,7 +4,7 @@
   "description": "",
   "main": "login.php",
   "scripts": {
-    "watch": "browser-sync start --proxy \"http://tufblog.test\" --startPath login.php --files \"app/**/*, public/**/*\""
+    "dev": "browser-sync start --proxy \"http://tufblog.test\" --startPath login.php --files \"app/**/*, public/**/*\""
   },
   "keywords": [],
   "author": "",

@@ -1,13 +1,13 @@
 <?php
-$title = 'PHP TEST';
+echo password_hash('ad', PASSWORD_DEFAULT);
 ?>
 
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <title><?= $title ?></title>
+    <title></title>
 </head>
 <body>
-    <h1><?= $title ?></h1>
+    <h1></h1>
 </body>
 </html>
