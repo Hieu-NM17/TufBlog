@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Đăng Nhập';
-$styles = ['auth.css'];
+$styles = ['base.css', 'auth.css'];
 require_once __DIR__ . '/../layouts/header.php';
 ?>
 
@@ -12,8 +12,8 @@ require_once __DIR__ . '/../layouts/header.php';
         </div>
 
         <?php
-        if (!empty($error)) {
-            echo '<p class="auth__error">' . htmlspecialchars($error) . '</p>';
+        if (!empty($errors)) {
+            echo '<p class="auth__error">' . htmlspecialchars($errors['wrong_info']) . '</p>';
         }
 
         if (!empty($success)) {
