@@ -3,7 +3,6 @@ $pageTitle = 'Trang chủ';
 $styles = ['style.css'];
 require_once __DIR__ . '/../app/config/database.php';
 require_once __DIR__ . '/../app/views/layouts/header.php';
-require_once __DIR__ . '/../app/views/layouts/navbar.php';
 ?>
 
 <main>
@@ -11,6 +10,3 @@ require_once __DIR__ . '/../app/views/layouts/navbar.php';
     <p>Nơi chia sẻ kiến thức, câu chuyện và ý tưởng.</p>
 </main>
 
-<?php
-require_once __DIR__ . '/../app/views/layouts/footer.php';
-?>

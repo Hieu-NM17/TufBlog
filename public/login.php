@@ -23,11 +23,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         if ($_SESSION['role'] === 'admin') {
             header('Location: admin/index.php');
+        } else {
+            header('Location: index.php');
         }
-        header('Location: index.php');
         exit();
-    }
-    else {
+    } else {
         $errors['wrong_info'] = 'Thông tin đăng nhập không đúng !';
     }
 }
