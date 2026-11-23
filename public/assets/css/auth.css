@@ -2,23 +2,25 @@ body {
     background-color: var(--color-primary);
 }
 
-.login {
+.auth {
     background-color: var(--color-background);
     text-align: center;
-    margin: auto;
-    width: 450px;
-    height: 450px;
+    margin: 100px auto;
+    width: 90%;          
+    max-width: 450px;    
+    min-height: 450px;
+    padding: 2rem;       
     border-radius: var(--radius-splg);
     border: var(--color-border) solid 0.1rem;
 }
 
-.login__form {
-    width: inherit;
-    height: inherit;
+.auth__form {
+    min-width: 100px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 h1 {
@@ -26,38 +28,95 @@ h1 {
     color: var(--color-white);
 }
 
-.login__info {
+.auth__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     margin: var(--spacing-2);
 }
 
-.login__input {
+.auth__input {
+    width: 100%;
     color: var(--color-white);
-    width: 330px;
-    height: 50px;
+    min-width: 100px;
+    min-height: 50px;
     padding: 0.75rem;
     border-radius: var(--radius-md);
     background-color: #2e2e2e;
     border: none;
 }
 
-.login__error {
+.auth__input--username {
+    width: 60%;
+}
+
+.auth__input--display-name {
+    width: 35%;
+    
+}
+
+.auth__error {
     color: var(--color-white);
 }
 
-.login__forgot a {
-    display: block;
-    width: 300px;
-    color: var(--color-text);
-    text-align: right;
+.auth__function {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
 }
 
-.login__button {
+.auth__function--forgot {
+    margin: 0 5px;
+    text-align: right;
+    font-size: medium;
+}
+
+.auth__function--forgot:hover {
+    text-decoration: underline;
+}
+
+.auth__function--register {
+    margin: 0 5px;
+    text-align: left;
+    font-size: medium;
+}
+
+.auth__function--register:hover {
+    text-decoration: underline;
+}
+
+.auth__button {
     color: var(--color-white);
     border: none;
     background-color: var(--color-primary);
     border-radius: var(--radius-sm);
-    padding: 5px;
+    padding: 5px 60px;
     margin: 20px 0;
-    width: 180px;
-    height: 50px;
+    min-width: 100px;
+    min-height: 50px;
+    font-size: medium;
+    font-weight: 600;
 }
+
+.auth__button:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.auth__return {
+    display: block;
+    width: 100%;
+    min-height: 2px;
+    font-size: medium;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.auth__return a:hover {
+    text-decoration: underline;
+}
+
+.auth__success {
+    color: var(--color-text);
+}
+

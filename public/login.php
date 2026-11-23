@@ -1,10 +1,12 @@
 <?php
-$error = '';
 session_start();
+$error = '';
+$success = $_SESSION['success'] ?? '';
+unset($_SESSION['success']);
 include __DIR__  . '/../app/config/database.php';
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    $username = $_POST['username'];
+    $username = trim($_POST['username']);
     $password = $_POST['password'];
 
     $stmt = $conn->prepare('SELECT id, username, password, role FROM users WHERE username = ? LIMIT 1');
@@ -13,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    if ($user && $password == $user['password']) {
+    if ($user && password_verify($password, $user['password'])) {
         session_regenerate_id(true);
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['id'];
@@ -26,4 +28,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     }
 }
 require_once __DIR__ . '/../app/views/auth/login.php';
-?>
