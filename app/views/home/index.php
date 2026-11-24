@@ -39,29 +39,37 @@ require_once __DIR__ . '/../layouts/header.php';
             </ul>
         </nav>
     </aside>
+
+    <!-- Phần liền với sidebar  -->
     <main class="main-content">
         <div class="main-content__header">
             <a href="#" class="main-content__title">Trang chủ</a>
         </div>
-        <?php if (isset($_SESSION['user_id'])): ?>
-            <section class="composer">
-                <div class="avatar"><?= htmlspecialchars(mb_strtoupper(mb_substr($_SESSION['username'], 0, 1, 'UTF-8'), 'UTF-8')) ?></div>
-                <form id="post-form" class="composer__form">
-                    <div class="composer__name"><?= htmlspecialchars($_SESSION['username']) ?></div>
-                    <textarea id="post-content" name="content" class="composer__input" rows="2" maxlength="500" placeholder="Có gì mới?"></textarea>
-                    <div class="composer__footer">
-                        <span id="post-error" class="composer__error"></span>
-                        <button type="submit" class="btn btn--primary">Đăng</button>
-                    </div>
-                </form>
-            </section>
-        <?php else: ?>
-            <section class="composer composer--guest">
-                <a href="/login.php">Đăng nhập</a>&nbsp;để đăng bài
-            </section>
-        <?php endif; ?>
-        <section id="feed"></section>
+        <!-- đăng bài + bài viết từ database  -->
+        <section class="composer">
+            <div class="avatar">
+                <?= htmlspecialchars(mb_substr($_SESSION['username'], 0, 1)) ?>
+            </div>
+            <form id="post-form" class="composer__form">
+                <div class="composer__name">
+                    <?= htmlspecialchars($_SESSION['username']) ?>
+                </div>
+                <textarea
+                    id="post-content"
+                    name="content"
+                    class="composer__input"
+                    rows="2"
+                    maxlength="500"
+                    placeholder="Có gì mới?">
+            </textarea>
+            
+                <div class="composer__footer">
+                    <button type="submit" class="btn btn--primary">Đăng</button>
+                </div>
+            </form>
+        </section>
 
+        <section id="feed"></section>
     </main>
     <aside class="right-sidebar"></aside>
     <script src="/assets/js/home.js"></script>

@@ -7,11 +7,9 @@
 
 body {
     display: flex;
-    color: var(--color-background-2);
 }
 
 a {
-    text-decoration: none;
     color: black;
 }
 
@@ -37,9 +35,6 @@ a {
 }
 
 /* Menu */
-.sidebar__menu {
-    list-style: none;
-}
 
 .sidebar__item {
     margin-bottom: 8px;
@@ -66,15 +61,13 @@ a {
     font-weight: bold;
 }
 
+
 /* MAIN  */
 
-/* MAIN */
 .main-content {
-    flex: 1;
-    min-width: 0;
-    max-width: 640px;
+    max-width: 700px;
     margin: 0 auto;
-    min-height: 100vh;
+
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
 }
@@ -82,11 +75,10 @@ a {
 .main-content__header {
     position: sticky;
     top: 0;
-    z-index: 10;
     padding: 16px 20px;
-    background-color: #fff;
+    background-color: white;
     border-bottom: 1px solid #e5e5e5;
-    text-align: center;
+    text-align: left;
 }
 
 .main-content__title {
@@ -95,7 +87,7 @@ a {
     color: #111;
 }
 
-/* Cột phải (để trống, cân đối với sidebar trái) */
+/* Cột phải (để trống) */
 .sidebar,
 .right-sidebar {
     flex-shrink: 0;
@@ -153,7 +145,7 @@ a {
 }
 
 .post__time {
-    color: #999;
+    color: grey;
     font-size: 14px;
 }
 
@@ -165,22 +157,12 @@ a {
     overflow-wrap: break-word;
 }
 
-@media (max-width: 1100px) {
-    .right-sidebar {
-        display: none;
-    }
-
-    .main-content {
-        margin: 0;
-    }
-}
-
 /* Ô đăng bài */
 .composer {
     display: flex;
     gap: 12px;
     padding: 16px 20px;
-    border-bottom: 15px solid #f2f2f2;  
+    border-bottom: 15px solid #f2f2f2;
 }
 
 .composer--guest {
@@ -203,6 +185,7 @@ a {
     font-weight: 600;
     font-size: 15px;
     margin-bottom: 4px;
+    color: black;
 }
 
 .composer__input {
@@ -239,7 +222,6 @@ a {
     border: none;
     border-radius: 10px;
     font-weight: 600;
-    cursor: pointer;
 }
 
 .btn--primary {
@@ -249,9 +231,4 @@ a {
 
 .btn--primary:hover {
     background-color: #333;
-}
-
-.btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
 }

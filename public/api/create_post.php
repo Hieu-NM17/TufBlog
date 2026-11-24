@@ -2,49 +2,27 @@
 session_start();
 require_once __DIR__ . '/../../app/config/database.php';
 
-header('Content-Type: application/json; charset=utf-8');
+header('Content-Type: application/json');
 
-function fail($code, $message)
-{
-    http_response_code($code);
-    echo json_encode(['error' => $message], JSON_UNESCAPED_UNICODE);
+// Phải đăng nhập mới được đăng bài
+if (!isset($_SESSION['user_id'])) {
+    echo json_encode(['error' => 'Bạn cần đăng nhập để đăng bài']);
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    fail(405, 'Phương thức không hợp lệ');
-}
-
-if (!isset($_SESSION['user_id'])) {
-    fail(401, 'Bạn cần đăng nhập để đăng bài');
-}
-
+// Lấy nội dung và kiểm tra
 $content = trim($_POST['content'] ?? '');
 
-if ($content === '') {
-    fail(400, 'Nội dung không được để trống');
+if ($content === '' || mb_strlen($content) > 500) {
+    echo json_encode(['error' => 'Nội dung phải từ 1 đến 500 ký tự']);
+    exit;
 }
 
-if (mb_strlen($content, 'UTF-8') > 500) {
-    fail(400, 'Nội dung không được quá 500 ký tự');
-}
-
+// Lưu vào database
 $userId = $_SESSION['user_id'];
 
 $stmt = $conn->prepare('INSERT INTO posts (user_id, content) VALUES (?, ?)');
 $stmt->bind_param('is', $userId, $content);
 $stmt->execute();
-$newId = $conn->insert_id;
 
-$stmt = $conn->prepare(
-    'SELECT posts.id, posts.content, posts.created_at,
-            users.username, users.display_name, users.avatar
-     FROM posts
-     JOIN users ON posts.user_id = users.id
-     WHERE posts.id = ?'
-);
-$stmt->bind_param('i', $newId);
-$stmt->execute();
-$post = $stmt->get_result()->fetch_assoc();
-
-echo json_encode(['success' => true, 'post' => $post], JSON_UNESCAPED_UNICODE); 
+echo json_encode(['success' => true]);
