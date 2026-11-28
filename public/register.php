@@ -35,23 +35,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
-        $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
-        $stmt->bind_param('ss', $username, $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
+        $sql = "SELECT id FROM users WHERE username = '$username' OR email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        if ($result && mysqli_num_rows($result) > 0) {
             $errors['user_exist'] = 'Username hoặc Email đã được đăng ký trên hệ thống';
         }
-        $stmt->close();
     }
 
     if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO `users`(`username`, `password`, `display_name`, `email`) 
-            VALUES (?, ?, ?, ?)");
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $stmt->bind_param('ssss', $username, $password, $display_name, $email);
+        $sql = "INSERT INTO `users`(`username`, `password`, `display_name`, `email`) 
+            VALUES ('$username', '$password', '$display_name', '$email')";
+        $result = mysqli_query($conn, $sql);
 
-        if ($stmt->execute()) {
+        if ($result) {
             $_SESSION['success'] = 'Đăng ký thành công, vui lòng đăng nhập!';
             header('Location: login.php');
             exit;
